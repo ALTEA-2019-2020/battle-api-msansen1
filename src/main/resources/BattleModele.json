@@ -1,0 +1,99 @@
+{
+  "uuid": "781c2cc7-1681-4c6a-a94f-0445a0629453",
+  "trainer": {
+    "name": "Ash",
+    "team": [
+      {
+        "id": 1,
+        "type": {
+          "id": 25,
+          "baseExperience": 112,
+          "height": 4,
+          "name": "Pikachu",
+          "stats": {
+            "speed": 90,
+            "defense": 40,
+            "attack": 55,
+            "hp": 35
+          },
+          "weight": 60,
+          "sprites": {
+            "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png",
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+          }
+        },
+        "maxHp": 40,
+        "attack": 24,
+        "defense": 19,
+        "speed": 37,
+        "level": 18,
+        "hp": 40,
+        "ko": false,
+        "alive": true
+      }
+    ],
+    "nextTurn": true
+  },
+  "opponent": {
+    "name": "Misty",
+    "team": [
+      {
+        "id": 2,
+        "type": {
+          "id": 120,
+          "baseExperience": 68,
+          "height": 8,
+          "name": "Staryu",
+          "stats": {
+            "speed": 85,
+            "defense": 55,
+            "attack": 45,
+            "hp": 30
+          },
+          "weight": 345,
+          "sprites": {
+            "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/120.png",
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png"
+          }
+        },
+        "maxHp": 38,
+        "attack": 21,
+        "defense": 24,
+        "speed": 35,
+        "level": 18,
+        "hp": 38,
+        "ko": false,
+        "alive": true
+      },
+      {
+        "id": 3,
+        "type": {
+          "id": 121,
+          "baseExperience": 182,
+          "height": 11,
+          "name": "Starmie",
+          "stats": {
+            "speed": 115,
+            "defense": 85,
+            "attack": 75,
+            "hp": 60
+          },
+          "weight": 800,
+          "sprites": {
+            "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/121.png",
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png"
+          }
+        },
+        "maxHp": 56,
+        "attack": 36,
+        "defense": 40,
+        "speed": 53,
+        "level": 21,
+        "hp": 56,
+        "ko": false,
+        "alive": true
+      }
+    ],
+    "nextTurn": false
+  }
+}

@@ -13,10 +13,6 @@ public class TrainerType {
 
     @Getter
     @Setter
-    private String password;
-
-    @Getter
-    @Setter
     private List<PokemonType> team;
 
 }

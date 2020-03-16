@@ -3,7 +3,6 @@ package com.miage.altea.battle_api.controller;
 
 import com.miage.altea.battle_api.bo.Battle;
 import com.miage.altea.battle_api.service.BattleService;
-import com.miage.altea.battle_api.service.PokemonTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
