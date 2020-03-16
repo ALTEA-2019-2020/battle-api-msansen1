@@ -1,5 +1,6 @@
 package com.miage.altea.battle_api.bo;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,5 +21,7 @@ public class BattlePokemon {
 
     public BattlePokemon(PokemonType pokemon) {
         this.type = pokemon;
+        this.ko = false;
+        this.alive = true;
     }
 }

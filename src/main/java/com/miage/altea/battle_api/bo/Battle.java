@@ -6,19 +6,24 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+import java.util.Random;
 import java.util.UUID;
 
 @Getter
 @Setter
-@RequiredArgsConstructor
 public class Battle {
-    @NonNull
     UUID uuid;
 
-    @NonNull
     BattleTrainer  trainer;
 
-    @NonNull
     BattleTrainer opponent;
 
+    public Battle( UUID uuid,  BattleTrainer trainer,  BattleTrainer opponent) {
+        this.uuid = uuid;
+        this.trainer = trainer;
+        this.opponent = opponent;
+
+        this.trainer.setNextTurn(trainer.getTeam().get(0).getSpeed() > opponent.getTeam().get(0).getSpeed());
+        this.opponent.setNextTurn(! this.trainer.getNextTurn());
+    }
 }

@@ -6,11 +6,11 @@ import org.springframework.stereotype.Service;
 public class StatsCalculatorImpl implements StatsCalculator {
     @Override
     public int calculateHp(int base, int level) {
-        return 0;
+        return 10+level+(base*level/50);
     }
 
     @Override
     public int calculateStat(int base, int level) {
-        return 0;
+        return 5+(base*level/50);
     }
 }
