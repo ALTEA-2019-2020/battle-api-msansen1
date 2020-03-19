@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "b7b7beae-cdcf-42c1-b6c8-36ed688f3ea8",
+		"name": "Altea",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "trainers-api",
+			"item": [
+				{
+					"name": "get trainers heroku",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://altea-jpa-msn.herokuapp.com/trainers/",
+							"protocol": "https",
+							"host": [
+								"altea-jpa-msn",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"trainers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/trainers/Ash",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/trainers/Ash",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"trainers",
+								"Ash"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/trainers/post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Bug Catcher\",\n  \"team\": [\n    {\"pokemonTypeId\": 13, \"level\": 6},\n    {\"pokemonTypeId\": 10, \"level\": 6}\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/trainers/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"trainers",
+								""
+							]
+						},
+						"description": "post a trainer"
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "username",
+						"value": "user",
+						"type": "string"
+					},
+					{
+						"key": "password",
+						"value": "3563cd85-9088-41c7-8569-5e3fa3849005",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "bead8544-6244-406f-a26c-4d17d74d35f3",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "8f864124-b0de-4175-abcc-85bb733dfeba",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "pokemon-api",
+			"item": [
+				{
+					"name": "http://localhost:8080/pokemon-types/25",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pokemon-types/25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pokemon-types",
+								"25"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "game-ui",
+			"item": [
+				{
+					"name": "http://localhost:8082/battles/?trainer=Ash&opponent=Misty",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/battles/?trainer=Ash&opponent=Misty",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"battles",
+								""
+							],
+							"query": [
+								{
+									"key": "trainer",
+									"value": "Ash"
+								},
+								{
+									"key": "opponent",
+									"value": "Misty"
+								}
+							]
+						},
+						"description": "createBattle"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/battles/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/battles/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"battles",
+								""
+							]
+						},
+						"description": "get battles"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/battles/39bf6efe-76e6-4b05-a075-20aec173a3de",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/battles/39bf6efe-76e6-4b05-a075-20aec173a3de",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"battles",
+								"39bf6efe-76e6-4b05-a075-20aec173a3de"
+							]
+						},
+						"description": "get onebattle"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "alteaPostRequestApiPockemon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alteaPostRequestApiPockemon trainers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/trainers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"trainers",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "3563cd85-9088-41c7-8569-5e3fa3849005",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "user",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "88a517ea-590d-4a1a-ba93-7b0cf88cae9e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "148223ec-28cc-4300-ae89-33d15d2b4d63",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
