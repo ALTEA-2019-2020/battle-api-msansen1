@@ -4,9 +4,9 @@ package com.miage.altea.battle_api.service;
 import com.miage.altea.battle_api.bo.Battle;
 import com.miage.altea.battle_api.bo.BattlePokemon;
 import com.miage.altea.battle_api.bo.BattleTrainer;
-import com.miage.altea.battle_api.bo.PokemonType;
 import com.miage.altea.battle_api.factory.BattlePokemonFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ public class BattleServiceImpl implements BattleService {
     }
 
     @Override
-    public Battle createBattle(String trainerName, String opponentName) {
+    public Pair<UUID, Battle> createBattle(String trainerName, String opponentName) {
         var trainer = trainerTypeService.getTrainerType(trainerName);
         BattleTrainer bTrainer = new BattleTrainer(trainer.getName());
         List<BattlePokemon> lbpt = new ArrayList<>();
@@ -42,8 +42,8 @@ public class BattleServiceImpl implements BattleService {
             lbpo.add(battlePokemonFactory.createBattlePokemon(pokemonType, pokemonType.getLevel()));
         });
         bOpponent.setTeam(lbpo);
-
-        return new Battle(UUID.randomUUID(),bTrainer, bOpponent);
+        var uuid = UUID.randomUUID();
+        return Pair.of(uuid, new Battle(uuid, bTrainer, bOpponent));
     }
 
     @Override
