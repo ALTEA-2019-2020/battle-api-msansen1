@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
+import java.util.Optional;
 
 @Getter
 @Setter
@@ -23,5 +24,13 @@ public class BattleTrainer {
 
     public BattleTrainer(String trainerName) {
         this.name = trainerName;
+    }
+
+    public Optional<BattlePokemon> findNextPokemon() {
+        return Optional.ofNullable(team.stream()
+                .filter(battlePokemon -> battlePokemon.getKo().equals(Boolean.FALSE))
+                .findFirst()
+                .get()
+        );
     }
 }
