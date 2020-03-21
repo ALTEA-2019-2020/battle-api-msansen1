@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.UUID;
 
+@CrossOrigin
 @RestController
 @RequestMapping(value="/battles", produces = MediaType.APPLICATION_JSON_VALUE)
 public class BattlesController {
