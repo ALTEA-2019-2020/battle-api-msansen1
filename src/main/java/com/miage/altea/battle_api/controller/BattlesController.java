@@ -14,18 +14,18 @@ import java.util.UUID;
 
 @CrossOrigin
 @RestController
-@RequestMapping(value="/battles", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value="/", produces = MediaType.APPLICATION_JSON_VALUE)
 public class BattlesController {
 
     @Autowired
     public BattleRepository battleRepository;
 
-    @PostMapping(value = "/")
-    ResponseEntity<UUID> createBattle(@RequestParam String trainer, @RequestParam String opponent){
+    @PostMapping(value = "/battles")
+    ResponseEntity<Battle> createBattle(@RequestParam String trainer, @RequestParam String opponent){
         return ResponseEntity.status(HttpStatus.OK).body(battleRepository.createBattle(trainer, opponent));
     }
 
-    @GetMapping("/")
+    @GetMapping("/battles")
     ResponseEntity<List<Battle>> getAllBattles() {
         var battles = battleRepository.findBattles();
         if (battles.isEmpty())
@@ -33,7 +33,7 @@ public class BattlesController {
         else return ResponseEntity.status(HttpStatus.OK).body(battles.get());
     }
 
-    @GetMapping("/{uuid}")
+    @GetMapping("battles/{uuid}")
     ResponseEntity<Battle> getBattle(@PathVariable UUID uuid) {
         var battle = battleRepository.findBattle(uuid);
         if (battle.isEmpty())
@@ -41,7 +41,7 @@ public class BattlesController {
         else return ResponseEntity.status(HttpStatus.OK).body(battle.get());
     }
 
-    @PostMapping("/{uuid}/{trainerName}/attack")
+    @PostMapping("battles/{uuid}/{trainerName}/attack")
     ResponseEntity<Battle> updateBattle(@PathVariable UUID uuid, @PathVariable String trainerName) throws Exception {
         return battleRepository.updateBattle(uuid,trainerName);
     }

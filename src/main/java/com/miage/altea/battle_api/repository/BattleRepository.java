@@ -19,10 +19,10 @@ public class BattleRepository {
     public BattleService battleService;
 
 
-    public UUID createBattle(String trainer, String opponent){
+    public Battle createBattle(String trainer, String opponent){
         var newbattle = battleService.createBattle(trainer, opponent);
         battles.put(newbattle.getFirst(), newbattle.getSecond());
-        return newbattle.getFirst();
+        return newbattle.getSecond();
     }
 
     public Optional<Battle> findBattle(UUID uuid){
