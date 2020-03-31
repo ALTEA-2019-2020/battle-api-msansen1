@@ -7,10 +7,10 @@ battle-api-msansen1 created by GitHub Classroom
 
 |  Variable | Description  |
 |:-:|:-:|
-| pokemonType.service.url | Api de pokemontypes |
-| trainerType.service.url | Api de trainers |
-| SPRING_USERNAME | Basic Auth connection Username |
-| SPRING_PASSWORD | Basic Auth Password |
+| API_POKEMONTYPE | Api de pokemontypes |
+| API_TRAINERTYPE | Api de trainers |
+| API_TRAINERTYPE_USERNAME | Api de trainers:Basic Auth connection Username |
+| API_TRAINERTYPE_PASSWORD | Api de trainers:Basic Auth Password |
 
 #API disponibles
 [Swagger url](https://battle-api-msn.herokuapp.com/swagger-ui.html)  
