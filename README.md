@@ -7,7 +7,7 @@ An api used as a microservice for the project [Pokemon GameUI](https://github.co
 
 [Demo Hosted on Heroku](https://battle-api-msn.herokuapp.com/)
 
-#Configuration necessaire au lancement :  
+# Configuration necessaire au lancement :  
 
 |  Variable | Description  |
 |:-:|:-:|
@@ -16,11 +16,11 @@ An api used as a microservice for the project [Pokemon GameUI](https://github.co
 | API_TRAINERTYPE_USERNAME | Api de trainers:Basic Auth connection Username |
 | API_TRAINERTYPE_PASSWORD | Api de trainers:Basic Auth Password |
 
-#API disponibles  
+# API disponibles  
 [Swagger url](https://battle-api-msn.herokuapp.com/swagger-ui.html)  
 [JSON api-docs](https://battle-api-msn.herokuapp.com/v2/api-docs)
 
-##BattlesController:  
+## BattlesController:  
 	{POST /battles, produces [application/json]}: createBattle(String,String)  
 	{GET /battles, produces [application/json]}: getAllBattles()  
 	{GET /battles/{uuid}, produces [application/json]}: getBattle(UUID)  
